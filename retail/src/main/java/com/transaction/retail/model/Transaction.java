@@ -22,35 +22,28 @@ public class Transaction {
 	private double transactionId;
 	
 	
-	@Column(name = "amount")
+	
 	private double amount;
 
-	@Column(name = "date")
+	
 	private LocalDate date;
 	
-	@JsonBackReference
-	@NotNull
-	@ManyToOne
-	@JoinColumn(name="accountNo")
-	private Account accountNo;
-
 	
+	private long accountNo;
+
 
 	public Transaction() {
-		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 
-
-	public Transaction(double transactionId, double amount, LocalDate date, Account accountNo) {
+	public Transaction(double transactionId, double amount, LocalDate date, long accountNo) {
 		super();
 		this.transactionId = transactionId;
 		this.amount = amount;
 		this.date = date;
 		this.accountNo = accountNo;
 	}
-
 
 
 	public double getTransactionId() {
@@ -58,11 +51,9 @@ public class Transaction {
 	}
 
 
-
 	public void setTransactionId(double transactionId) {
 		this.transactionId = transactionId;
 	}
-
 
 
 	public double getAmount() {
@@ -70,11 +61,9 @@ public class Transaction {
 	}
 
 
-
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-
 
 
 	public LocalDate getDate() {
@@ -82,23 +71,19 @@ public class Transaction {
 	}
 
 
-
 	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 
 
-
-	public Account getAccountNo() {
+	public long getAccountNo() {
 		return accountNo;
 	}
 
 
-
-	public void setAccountNo(Account accountNo) {
+	public void setAccountNo(long accountNo) {
 		this.accountNo = accountNo;
 	}
-
 
 
 	@Override
@@ -106,8 +91,11 @@ public class Transaction {
 		return "Transaction [transactionId=" + transactionId + ", amount=" + amount + ", date=" + date + ", accountNo="
 				+ accountNo + "]";
 	}
+	
+	
 
 	
+    
 	
 	
 

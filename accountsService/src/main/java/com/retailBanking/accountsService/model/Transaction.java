@@ -2,23 +2,21 @@ package com.retailBanking.accountsService.model;
 
 import java.time.LocalDate;
 
-
-
-
-
 public class Transaction {
 	
    private double transactionId;
+   private double amount;
+   private LocalDate date;
 	
 	
-	
-	public double getTransactionId() {
+	   
+public double getTransactionId() {
 	return transactionId;
 }
 
-public void setTransactionId(double transactionId) {
+ public void setTransactionId(double transactionId) {
 	this.transactionId = transactionId;
-}
+ }
 
 public double getAmount() {
 	return amount;
@@ -35,14 +33,6 @@ public LocalDate getDate() {
 public void setDate(LocalDate date) {
 	this.date = date;
 }
-
-
-
-	private double amount;
-
-	private LocalDate date;
-	
-	
 
 
 	public Transaction() {

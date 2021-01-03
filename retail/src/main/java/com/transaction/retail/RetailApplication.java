@@ -16,10 +16,11 @@ public class RetailApplication {
 		SpringApplication.run(RetailApplication.class, args);
 	}
 	
-	@Bean
+	/*@Bean
 	@LoadBalanced
 	public RestTemplate createRestTemplate(RestTemplateBuilder builder) {
 		return builder.build();
 	}
+	*/
 	
 }
